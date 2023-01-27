@@ -8,7 +8,7 @@ import openfl.utils.Assets;
 import haxe.CallStack;
 import flixel.FlxG;
 import openfl.Lib;
-
+import sys.io.File;
 using StringTools;
 
 /*
@@ -64,7 +64,7 @@ class HSys
 		if (!sys.HSys.exists(copyTo)) {
 			sys.FileSystem.createDirectory(Main.path + copyTo);
 		}
-		var files:Array<String> = sys.FileSystem.readDirectory(path);
+		var files:Array<String> = HSys.readDirectory(path);
 		for(file in files) {
 			if (HSys.exists(path + "/" + file)) {
 				copyFolder(path + "/" + file, copyTo + "/" + file);

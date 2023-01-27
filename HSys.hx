@@ -61,7 +61,7 @@ class HSys
 	
 	public static function copyFolder(path:String, copyTo:String) {
 		#if sys
-		if (!sys.HSys.exists(copyTo)) {
+		if (!HSys.exists(copyTo)) {
 			sys.FileSystem.createDirectory(Main.path + copyTo);
 		}
 		var files:Array<String> = HSys.readDirectory(path);

@@ -58,6 +58,23 @@ class HSys
 	** https://api.haxeflixel.com/Array.html
 	** https://api.haxeflixel.com/String.html
 	*/
+	
+	public static function copyFolder(path:String, copyTo:String) {
+		#if sys
+		if (!sys.HSys.exists(copyTo)) {
+			sys.FileSystem.createDirectory(Main.path + copyTo);
+		}
+		var files:Array<String> = sys.FileSystem.readDirectory(path);
+		for(file in files) {
+			if (HSys.exists(path + "/" + file)) {
+				copyFolder(path + "/" + file, copyTo + "/" + file);
+			} else {
+				sys.io.File.copy(path + "/" + file, copyTo + "/" + file);
+			}
+		}
+		#end
+	}
+	
 	public static function readDirectory(library:String):Array<String>
 	{
 		var libraryArray:Array<String> = [];

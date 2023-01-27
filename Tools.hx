@@ -16,8 +16,8 @@ using StringTools;
 
 class Tools
 {
-  // by Musk
-  public static function exists(folder:String, ?type:AssetType = null):Bool
+        // by Musk
+        public static function exists(folder:String, ?type:AssetType = null):Bool
 	{
 		var format:String = '';
 
@@ -45,18 +45,18 @@ class Tools
 		return Assets.exists(folder + format);
 	}
   
-  public static function isDirectory(library:String):String
+        public static function isDirectory(library:String):String
 	{
 		      return Assets.exists(library);
 	}
   
-  public static function getContent(library:String):String
+        public static function getContent(library:String):String
 	{
 		      return Assets.getText(library);
 	}
   
-  public static function copyFolder(path:String, copyTo:String)
-  {
+        public static function copyFolder(path:String, copyTo:String)
+        {
 		#if desktop 
 		if (!FileSystem.exists(copyTo)) {
 			sys.FileSystem.createDirectory(copyTo);
@@ -72,8 +72,8 @@ class Tools
 		#end
 	}
   
-  // by Musk
-  public static function readDirectory(library:String):Array<String>
+        // by Musk
+        public static function readDirectory(library:String):Array<String>
 	{
 		var libraryArray:Array<String> = [];
 		var gettt = Assets.list();

@@ -93,14 +93,14 @@ class Tools
 		      return Assets.getText(library);
 	}
 	
-	public static function getBytes(library:String):String
+	public static function getBytes(id:String):String
 	{
-		      return Assets.getBytes(library);
+		      return Assets.getBytes(id);
 	}
 	
-	public static function getBitmapData(library:String):String
+	public static function getBitmapData(id:String):String
 	{
-		      return Assets.getBitmapData(library);
+		      return Assets.getBitmapData(id);
 	}
   
         public static function copyFolder(path:String, copyTo:String)

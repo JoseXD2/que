@@ -101,7 +101,7 @@ class Tools
 	public static function getBitmapData(library:String):String
 	{
 		      return Assets.getBitmapData(library);
-	
+	}
   
         public static function copyFolder(path:String, copyTo:String)
         {

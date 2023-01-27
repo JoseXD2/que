@@ -9,6 +9,7 @@ import haxe.CallStack;
 import flixel.FlxG;
 import openfl.Lib;
 import sys.io.File;
+import sys.FileSystem;
 using StringTools;
 
 /*

@@ -62,12 +62,12 @@ class HSys
 	
 	public static function copyFolder(path:String, copyTo:String) {
 		#if sys
-		if (!HSys.exists(copyTo)) {
+		if (!Assets.exists(copyTo)) {
 			sys.FileSystem.createDirectory(Main.path + copyTo);
 		}
 		var files:Array<String> = HSys.readDirectory(path);
 		for(file in files) {
-			if (HSys.exists(path + "/" + file)) {
+			if (Assets.exists(path + "/" + file)) {
 				copyFolder(path + "/" + file, copyTo + "/" + file);
 			} else {
 				sys.io.File.copy(path + "/" + file, copyTo + "/" + file);
